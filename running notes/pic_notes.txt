@@ -1,0 +1,36 @@
+PIC18F4580
+
+For direction of port
+TRISx => 8bit
+0 => output
+1 => Input
+eg.TRISA = 0x00;
+TRISDbits.RD0=1;   TRISDbits.RD0=0;
+
+For port polarity
+PORTx => 8bit
+PORTD=0x00; //all pins are low
+PORTD=0xFF; //all pins are high
+PORTDbits.RD0=1;
+
+
+
+#include<pic18f4580.h>
+int delay(int time){
+int i,j;
+for(i=0;i<500;i++){
+	for(j=0;j<time;j++);
+}
+}
+
+int main(){
+TRIS=0x00;
+
+while(1){
+PORTD=0x0f;
+delay(80);
+PORTD=0x00;
+delay(20);
+
+ 
+

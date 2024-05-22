@@ -1,0 +1,3 @@
+Warning[2103] D:\Sachin_code\Techoscripts\PIC\pic_code\timer0.c 18 : default startup code expects main function declared as 'void main (void)'
+Warning[2058] D:\Sachin_code\Techoscripts\PIC\pic_code\timer0.c 24 : call of function without prototype
+Warning[2058] D:\Sachin_code\Techoscripts\PIC\pic_code\timer0.c 26 : call of function without prototype
