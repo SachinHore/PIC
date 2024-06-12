@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: 24.UART_TX.mcp
+# Date: Mon May 27 17:16:59 2024
+
+AS = MPASMWIN.exe
+CC = mcc18.exe
+LD = mplink.exe
+AR = mplib.exe
+RM = rm
+
+24.UART_TX.cof : 24.UART_TX.o
+	$(LD) /p18F4580 /l"C:\Program Files (x86)\Microchip\mplabc18\v3.46\lib" "24.UART_TX.o" /u_CRUNTIME /u_DEBUG /o"24.UART_TX.cof" /M"24.UART_TX.map" /W
+
+24.UART_TX.o : 24.UART_TX.c C:/Program\ Files\ (x86)/Microchip/mplabc18/v3.46/h/p18f4580.h
+	$(CC) -p=18F4580 "24.UART_TX.c" -fo="24.UART_TX.o" -D__DEBUG -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+
+clean : 
+	$(RM) "24.UART_TX.o" "24.UART_TX.cof" "24.UART_TX.hex"
+

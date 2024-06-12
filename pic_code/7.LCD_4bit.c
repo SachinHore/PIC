@@ -49,7 +49,7 @@ int lcd_data(int data){
 
 int lcd_init(){
 	lcd_cmd(0x02); //for 4 bit
-	lcd_cmd(0x28);
+	lcd_cmd(0x28);//setting 4-bit mode lcd having 2 lines and character shape between 5×7 matrix.
 	lcd_cmd(0x0f); //switching on lcd
 	lcd_cmd(0x01); //clearing screen
 	lcd_cmd(0x80); //first row first col

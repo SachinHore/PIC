@@ -1,6 +1,6 @@
 #include<p18f4580.h>
-#define rs PORTCbits.RC6
-#define en PORTCbits.RC7
+#define rs PORTCbits.RC0
+#define en PORTCbits.RC1
 
 #define r1 PORTBbits.RB0
 #define r2 PORTBbits.RB1
@@ -56,8 +56,10 @@ void main(){
 	TRISC = 0x00;
 
 	TRISB = 0x0f;
+	PORTB = 0x00;
 	ADCON1 = 0x0f;
 	lcd_init();
+/*
 	lcd_dat('A');
 
 	exp[0] = '1';
@@ -69,7 +71,7 @@ void main(){
 	lcd_dat(exp[2]);
 	lcd_dat('A');
 	
-
+*/
 	while(1){
 		c1 = 1;
 		c2 = c3 = c4 = 0;
@@ -137,7 +139,7 @@ void main(){
 		}
 		if(r4==1){
 			lcd_dat('=');
-			lcd_dat(i+'0');
+			//lcd_dat(i+'0');
 			while(r4==1);
 			delay(10);
 		}

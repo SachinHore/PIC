@@ -14,6 +14,7 @@ ADCON1=0x0F;//0000 1111
 TRISC=0x00;//o/p(led)
 TRISBbits.RB0=1;//i/p(sw)
 init_Ext_interrupt();
+
 led=0;
 while(1){
 }
